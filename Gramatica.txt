@@ -1,4 +1,4 @@
-﻿Programa -> Secuencia-sent
+﻿﻿Programa -> Secuencia-sent
 Secuencia-sent -> Secuencia-sent ; Sentencia
 Secuencia-sent -> Sentencia
 Sentencia -> Sent-if
@@ -10,6 +10,7 @@ Sentencia -> Sent-declara
 Sentencia -> Sent-switch
 Sentencia -> Sent-while
 Sentencia -> Sent-for
+Sentencia -> Sent-func
 Sent-if -> if ( Exp ) { Secuencia-sent } endif
 Sent-if -> if ( Exp ) { Secuencia-sent } else { Secuencia-sent } endif
 Sent-repeat -> repeat { Secuencia-sent } until ( Exp )
@@ -25,7 +26,10 @@ Caso -> case Const : Secuencia-sent Break
 Break -> break ;
 Sent-default -> default : Secuencia-sent
 Sent-while -> while ( Exp ) { Secuencia-sent }
-Sent-for -> for ( Sent-assign ; Exp ; step num) { Secuencia-sent }
+Sent-for -> for ( Sent-assign ; Exp ; step num ) { Secuencia-sent }
+Sent-func -> CrearVentana ( id , Const-cadena  , num , num , num , num )
+Sent-func -> AgregarControl ( TipoControl , id , id , num , num )
+Sent-func -> CrearEvento ( id , id , id )
 Print -> " Cadena " , Identificadores
 Print -> " Cadena "
 Print -> Identificadores
