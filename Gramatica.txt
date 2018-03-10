@@ -1,0 +1,62 @@
+﻿Programa -> Secuencia-sent
+Secuencia-sent -> Secuencia-sent ; Sentencia
+Secuencia-sent -> Sentencia
+Sentencia -> Sent-if
+Sentencia -> Sent-repeat
+Sentencia -> Sent-assign
+Sentencia -> Sent-read
+Sentencia -> Sent-write
+Sentencia -> Sent-declara
+Sentencia -> Sent-switch
+Sentencia -> Sent-while
+Sentencia -> Sent-for
+Sent-if -> if ( Exp ) { Secuencia-sent } endif
+Sent-if -> if ( Exp ) { Secuencia-sent } else { Secuencia-sent } endif
+Sent-repeat -> repeat { Secuencia-sent } until ( Exp )
+Sent-assign -> id := Exp
+Sent-read -> read ( id )
+Sent-write -> write ( Print )
+Sent-declara -> Var { Tipo Identificadores }
+Sent-switch -> switch ( id ) { Sent-case }
+Sent-case -> Casos Sent-default
+Casos -> Casos Caso
+Casos -> Caso
+Caso -> case Const : Secuencia-sent Break
+Break -> break ;
+Sent-default -> default : Secuencia-sent
+Sent-while -> while ( Exp ) { Secuencia-sent }
+Sent-for -> for ( Sent-assign ; Exp ; step num) { Secuencia-sent }
+Print -> " Cadena " , Identificadores
+Print -> " Cadena "
+Print -> Identificadores
+Cadena -> letra Cadena 
+Cadena -> otro Cadena 
+Cadena -> letra 
+Cadena -> otro
+Identificadores -> Identificadores , id
+Identificadores -> id
+Tipo -> int
+Tipo -> float
+Tipo -> char
+Exp -> Exp-simple Op-comparacion Exp-simple
+Exp -> Exp-simple
+Op-comparacion -> ==
+Op-comparacion -> \>
+Op-comparacion -> \<
+Exp-simple -> Exp-simple Opsuma Term
+Exp-simple-> Term
+Opsuma -> +
+Opsuma -> -
+Term -> Term Opmult Potencia
+Term -> Potencia
+Potencia -> Potencia ^ Factor
+Potencia -> Factor
+Opmult -> *
+Opmult -> /
+Factor -> ( Exp )
+Factor -> num
+Factor -> id
+Const -> num
+Const -> Const-cadena
+Const-cadena -> ' letra '
+Const-cadena -> " Cadena "
