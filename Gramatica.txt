@@ -1,5 +1,5 @@
 ﻿﻿Programa -> Secuencia-sent
-Secuencia-sent -> Secuencia-sent ; Sentencia
+Secuencia-sent -> Secuencia-sent ; Sentencia ;
 Secuencia-sent -> Sentencia
 Sentencia -> Sent-if
 Sentencia -> Sent-repeat
@@ -15,8 +15,6 @@ Sent-if -> if ( Exp ) { Secuencia-sent } endif
 Sent-if -> if ( Exp ) { Secuencia-sent } else { Secuencia-sent } endif
 Sent-repeat -> repeat { Secuencia-sent } until ( Exp )
 Sent-assign -> id := Exp
-Sent-read -> read ( id )
-Sent-write -> write ( Print )
 Sent-declara -> Var { Tipo Identificadores }
 Sent-switch -> switch ( id ) { Sent-case }
 Sent-case -> Casos Sent-default
@@ -27,12 +25,8 @@ Break -> break ;
 Sent-default -> default : Secuencia-sent
 Sent-while -> while ( Exp ) { Secuencia-sent }
 Sent-for -> for ( Sent-assign ; Exp ; step num ) { Secuencia-sent }
-Sent-func -> CrearVentana ( id , Const-cadena  , num , num , num , num )
-Sent-func -> AgregarControl ( TipoControl , id , id , num , num )
-Sent-func -> CrearEvento ( id , id , id )
-Print -> " Cadena " , Identificadores
-Print -> " Cadena "
-Print -> Identificadores
+Sent-func -> id ( ) { Secuencia-sent }
+Print -> Concat
 Cadena -> letra Cadena 
 Cadena -> otro Cadena 
 Cadena -> letra 
@@ -61,6 +55,8 @@ Factor -> ( Exp )
 Factor -> num
 Factor -> id
 Const -> num
-Const -> Const-cadena
-Const-cadena -> ' letra '
-Const-cadena -> " Cadena "
+Const -> cadena
+Concat -> Concat + Texto
+Concat -> Texto
+Texto -> cadena
+Texto -> id
