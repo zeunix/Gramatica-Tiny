@@ -1,0 +1,20 @@
+void main()
+int a:=0;
+int b:=10;
+if(a<b)
+a:=50;
+endif
+Window w;
+Button b;
+TextBox t;
+funcion f:=funcion1();
+
+initWindow(w,500,500);
+createButton(w,b,50,50);
+createTextBox(w,t,50,80);
+
+endfunct
+
+void funcion1()
+.......
+endfunct

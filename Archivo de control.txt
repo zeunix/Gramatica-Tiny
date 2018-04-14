@@ -1,0 +1,3 @@
+14 de Abril del 2018:
+	* Rogelio, Salvador y Carlos trabajaron en una aproximación de la gramática y un código de ejemplo.
+	* Hugo propuso una aproximación de la gramática y un código de ejemplo.

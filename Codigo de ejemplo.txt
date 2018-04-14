@@ -1,0 +1,26 @@
+var{int a, b, c};
+var{ventana v1, v2};
+var{boton b1};
+var{checkbox c1};
+
+def suma {
+	a := a + b;
+}
+
+def cambioCheckBox {
+	if (c == 0) {
+		c := 1;
+	} else {
+		c := 0;
+	}
+}
+
+CrearVentana(v1, "Título de ventana", 30, 20, 150, 250);
+
+CrearBoton(b1, v1, 5, 5, 15, 5);
+CrearCheckbox(c1, v1, 5, 20, 5, 5);
+
+CrearEvento(b1, suma);
+CrearEvento(c1, cambioCheckBox);
+
+def main {...}
