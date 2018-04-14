@@ -1,0 +1,30 @@
+- Definición de variables globales.
+- Definición de funciones.
+- Definición de ventanas.
+- Definición de controles de las ventanas.
+- Definición de eventos de los controles.
+- Definición de la función Main.
+
+var{int a, b, c, d};
+var{ventana v1, v2, v3};
+var{boton b1};
+var{textbox t1};
+var{checkbox c1};
+
+def f1 {...} endDef;
+def f2 {...} endDef;
+def f3 {...} endDef;
+
+CrearVentana(v1, "Titulo1", 30, 20, 150, 250); # CrearVentana no la muestra en pantalla, para ello hay que llamar a una función especial MuestraVentana(v);
+CrearVentana(v2, "Titulo2", 30, 20, 150, 250);
+CrearVentana(v3, "Titulo3", 30, 20, 150, 250);
+
+CrearBoton(b1, v1, 5, 5, 15, 5);
+CrearTextBox(t1, v2, 5, 5, 15, 5);
+CrearCheckbox(c1, v3, 5, 5, 15, 5);
+
+CrearEvento(b1, f1);
+CrearEvento(t1, f2);
+CrearEvento(c1, f3);
+
+def main {...} endMain;
