@@ -11,9 +11,9 @@ var{boton b1};
 var{textbox t1};
 var{checkbox c1};
 
-def f1 {...} endDef;
-def f2 {...} endDef;
-def f3 {...} endDef;
+def f1 {...};
+def f2 {...};
+def f3 {...};
 
 CrearVentana(v1, "Titulo1", 30, 20, 150, 250); # CrearVentana no la muestra en pantalla, para ello hay que llamar a una función especial MuestraVentana(v);
 CrearVentana(v2, "Titulo2", 30, 20, 150, 250);
@@ -27,4 +27,4 @@ CrearEvento(b1, f1);
 CrearEvento(t1, f2);
 CrearEvento(c1, f3);
 
-def main {...} endMain;
+def main {...};
