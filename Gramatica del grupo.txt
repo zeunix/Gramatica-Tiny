@@ -26,7 +26,6 @@ sentencia-><sent-while>
 sentencia-><sent-switch>
 sentencia-><sent-for>
 sentencia-><sent-func>
-sentencia->MuestraVentana(id);
 
 sent-if->if(<exp>){<secuencia-sent>}
 sent-if->if(<exp>){<secuencia-sent>}else{<secuencia-sent>}
@@ -43,7 +42,9 @@ sentencia-case->case const {<secuencia-sent>} break ;
 
 sent-for->for(<id>;<exp>;step num){<secuencia-sent>}
 
-sent-func->id();
+sent-func->id()
+sent-func->AbreVentana(id)
+sent-func->CierraVentana(id)
 
 sent-declara->var{tipo<identificadores>};
 
