@@ -9,7 +9,7 @@ def-vents-><def-vents><def-vent>|<def-vent>
 def-vent->CreaVentana(id,cadena,num,num,num,num);
 
 def-ctrls-><def-ctrls><def-ctrl>|<def-ctrl>
-def-ctrl->tipo-control(id,id,num,num,num,num);
+def-ctrl->tipo-control(id,id,num,num,num,num,num);//Ultimo num agregado para asignar el tabIndex
 tipo-control->CreaBoton|CreaTextbox
 
 def-evnts-><def-evnts><def-evnt>|<def-evnt>
@@ -40,7 +40,7 @@ sent-switch->switch (id) {<secuencia-case>}
 secuencia-case-><secuencia-case><sentencia-case>|<sentencia-case>
 sentencia-case->case const {<secuencia-sent>} break ;
 
-sent-for->for(<id>;<exp>;step num){<secuencia-sent>}
+sent-for->for<num>:<num>{<secuencia-sent>}//Modifique el for, pienso que este for es mas simple y factible
 
 sent-func->id()
 sent-func->AbreVentana(id)
