@@ -1,3 +1,5 @@
+
+
 programa-><def-vars><def-funcs><def-vents><def-ctrls><def-evnts><def-main>
 
 def-vars-><def-vars><sent-declara>|<sent-declara>
@@ -9,7 +11,7 @@ def-vents-><def-vents><def-vent>|<def-vent>
 def-vent->CreaVentana(id,cadena,num,num,num,num);
 
 def-ctrls-><def-ctrls><def-ctrl>|<def-ctrl>
-def-ctrl->tipo-control(id,id,num,num,num,num,num);//Ultimo num agregado para asignar el tabIndex
+def-ctrl->tipo-control(id,id,num,num,num,num,num);
 tipo-control->CreaBoton|CreaTextbox
 
 def-evnts-><def-evnts><def-evnt>|<def-evnt>
@@ -32,7 +34,7 @@ sent-if->if(<exp>){<secuencia-sent>}else{<secuencia-sent>}
 
 sent-repeat->repeat{<secuencia-sent>}until(<exp>)
 
-sent-assign-><id>:=<exp>;
+sent-assign->id:=<exp>;
 
 sent-while->while (<exp>) {<secuencia-sent>}
 
@@ -40,15 +42,15 @@ sent-switch->switch (id) {<secuencia-case>}
 secuencia-case-><secuencia-case><sentencia-case>|<sentencia-case>
 sentencia-case->case const {<secuencia-sent>} break ;
 
-sent-for->for<num>:<num>{<secuencia-sent>}//Modifique el for, pienso que este for es mas simple y factible
+sent-for->for num:num{<secuencia-sent>}
 
 sent-func->id()
 sent-func->AbreVentana(id)
 sent-func->CierraVentana(id)
 
-sent-declara->var{tipo<identificadores>};
+sent-declara->tipo<identificadores>;
 
-identificadores-><identificadores>,<id>|<id>
+identificadores-><identificadores>,id|id
 
 exp-><exp-simple><op-comparacion><exp-simple>
 exp-><exp-simple>
@@ -73,5 +75,5 @@ opmult->*
 opmult->/
 
 factor->(<exp>)
-factor-><num>
-factor-><id>
+factor->num
+factor->id

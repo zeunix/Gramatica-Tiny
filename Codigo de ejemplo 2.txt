@@ -1,0 +1,37 @@
+
+
+int aux, obj, res, i;
+string input, output;
+ventana v1;
+textbox t1, t2;
+button b1;
+label l1, l2;
+
+def Factorial() {
+    LeeTextBox(t1, input);
+    Cast(input, obj);
+
+    if (obj >= 0) {
+        res := 1;
+        for (i := 1:obj, step 1) {
+            res := res * i;
+        }
+    } else {
+        res := -1;
+    }
+
+    Cast(res, output);
+    ImprimeTextBox(t2, output);
+}
+
+CreaVentana(v1, "Factorial", 50, 50, 250, 250);
+CreaTextBox(t1, v1, x, y, w, h);
+CreaTextBox(t2, v1, x, y, w, h);
+CreaButton(b1, v1, x, y, w, h, "Calcular factorial");
+CreaLabel(l1, v1, x, y, "Dame un número:");
+CreaLabel(l2, v1, x, y, "El factorial es:");
+CreaEvento(b1, Factorial);
+
+def main() {
+    
+}
