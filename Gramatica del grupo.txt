@@ -29,14 +29,14 @@ sentencia-><sent-switch>
 sentencia-><sent-for>
 sentencia-><sent-func>
 
-sent-if->if(<exp>){<secuencia-sent>}
-sent-if->if(<exp>){<secuencia-sent>}else{<secuencia-sent>}
+sent-if->if(<exp-cond>){<secuencia-sent>}
+sent-if->if(<exp-cond>){<secuencia-sent>}else{<secuencia-sent>}
 
-sent-repeat->repeat{<secuencia-sent>}until(<exp>)
+sent-repeat->repeat{<secuencia-sent>}until(<exp-cond>)
 
 sent-assign->id:=<exp>;
 
-sent-while->while (<exp>) {<secuencia-sent>}
+sent-while->while (<exp-cond>) {<secuencia-sent>}
 
 sent-switch->switch (id) {<secuencia-case>}
 secuencia-case-><secuencia-case><sentencia-case>|<sentencia-case>
@@ -54,6 +54,7 @@ identificadores-><identificadores>,id|id
 
 exp-><exp-simple><op-comparacion><exp-simple>
 exp-><exp-simple>
+exp-cond -> id <op-comparacion> id
 
 op-comparacion->==
 op-comparacion->\>
