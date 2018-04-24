@@ -1,20 +1,14 @@
+programa-><maestro><def-main>
+maestro-><maestro><def>|<def>|eps
+def-><sent-declara>|<def-func>
 
-
-programa-><def-vars><def-funcs><def-vents><def-ctrls><def-evnts><def-main>
-
-def-vars-><def-vars><sent-declara>|<sent-declara>
-
-def-funcs-><def-funcs><def-func>|<def-func>
 def-func->def id{<secuencia-sent>}
 
-def-vents-><def-vents><def-vent>|<def-vent>
 def-vent->CreaVentana(id,cadena,num,num,num,num);
 
-def-ctrls-><def-ctrls><def-ctrl>|<def-ctrl>
 def-ctrl->tipo-control(id,id,num,num,num,num,num);
 tipo-control->CreaBoton|CreaTextbox
 
-def-evnts-><def-evnts><def-evnt>|<def-evnt>
 def-evnt->CreaEvento(id,id);
 
 def-main->def main {<secuencia-sent>}
@@ -28,6 +22,10 @@ sentencia-><sent-while>
 sentencia-><sent-switch>
 sentencia-><sent-for>
 sentencia-><sent-func>
+sentencia-><def-vent>
+sentencia-><def-ctrl>
+sentencia-><def-evnt>
+sentencia-><sent-declara>
 
 sent-if->if(<exp-cond>){<secuencia-sent>}
 sent-if->if(<exp-cond>){<secuencia-sent>}else{<secuencia-sent>}
@@ -45,7 +43,6 @@ sentencia-case->case const {<secuencia-sent>} break ;
 sent-for->for num:num{<secuencia-sent>}
 
 sent-func->id()
-sent-func->AbreVentana(id)
 sent-func->CierraVentana(id)
 
 sent-declara->tipo<identificadores>;
