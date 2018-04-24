@@ -35,6 +35,8 @@ sent-func->CierraVentana(id)
 sent-func->MBox(cadena)
 sent-func->Loop(id)
 sent-func->ImprimeTextBox(id, id)
+sent-func->LeeTextBox(id,id)
+sent-func->ImprimeTextBox(id,id)
 sent-declara-><tipo><identificadores>
 identificadores-><identificadores>,id|id
 exp-><exp-simple><op-comparacion><exp-simple>
@@ -46,7 +48,7 @@ exp-simple-><exp-simple><opsuma><term>
 exp-simple-><term>
 opsuma->+
 opsuma->-
-tipo->int|string|vent|textBox|label
+tipo->int|string|vent|textBox|boton|label
 term-><term><opmult><potencia>
 term-><potencia>
 potencia-><potencia>^<factor>
