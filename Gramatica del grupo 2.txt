@@ -36,6 +36,7 @@ sent-func->CierraVentana(id);
 sent-func->LeeTextBox(id,id);
 sent-func->Loop(id);
 sent-func->ImprimeTextBox(id,id);
+sent-func->Concat(id,id);
 sent-declara-><tipo><identificadores>
 identificadores-><identificadores>,id;|id;|id
 exp-><exp-simple><op-comparacion><exp-simple>
